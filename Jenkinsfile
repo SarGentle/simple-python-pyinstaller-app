@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh 'python -m venv .venv'
                 sh 'cd .venv/Scripts'
+                sh 'ls'
                 sh 'activate.bat'
                 sh 'pip install -r requirements.txt'
                 sh 'pip install pytest pytest-cov'
