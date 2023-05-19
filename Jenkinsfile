@@ -11,19 +11,19 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 // Install required Python packages
-                bat 'python -m pip install pytest pytest-cov'
+                sh 'python -m pip install pytest pytest-cov'
             }
         }
 
         stage('Run tests') {
             steps {
-                bat '.venv/bin/pytest'
+                sh 'pytest'
             }
         }
 
         stage('Coverage report') {
             steps {
-                bat '.venv/bin/pytest --cov=sources --cov-report=html:coverage'
+                sh 'pytest --cov=sources --cov-report=html:coverage'
             }
         }
 
