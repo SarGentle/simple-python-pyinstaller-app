@@ -11,7 +11,8 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh 'python -m venv .venv'
-                sh '.venv/Scripts/activate.bat'
+                sh '.venv/Scripts'
+                sh 'activate.bat'
                 sh 'pip install -r requirements.txt'
                 sh 'pip install pytest pytest-cov'
             }
