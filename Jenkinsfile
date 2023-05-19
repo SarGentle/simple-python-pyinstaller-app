@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                sh 'python --version'
                 git 'https://github.com/SarGentle/simple-python-pyinstaller-app.git'
             }
         }
