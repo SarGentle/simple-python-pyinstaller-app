@@ -9,18 +9,16 @@ pipeline {
         }
 
         stage('Install dependencies') {
-            steps {
-                bat label: 'test',
-                script: '''
-                chcp 65001
-                python -m venv .venv'
-                bat 'cd .venv'
-                bat 'Scripts'
-                bat 'activate.bat'
-                bat 'pip install -r requirements.txt'
-                bat 'pip install pytest pytest-cov'
-                '''
+                        steps {
+                sh '''python -m venv .venv;
+                    cd .venv/Scripts;
+                    ls;
+                    pwd;
+                    call activate.bat
+                    pip install -r requirements.txt;
+                    pip install pytest pytest-cov;'''
             }
+        }
         }
 
         stage('Run tests') {
