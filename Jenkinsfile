@@ -29,6 +29,7 @@ pipeline {
                     cd .venv/Scripts;
                     ./activate.bat;
                     cd ../..;
+                    ls;
                     pytest
                     '''
             }
