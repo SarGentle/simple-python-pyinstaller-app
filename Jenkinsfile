@@ -24,7 +24,11 @@ pipeline {
 
         stage('Run tests') {
             steps {
-                sh 'pytest sources/test_calc.py'
+
+                sh '''
+                        cd C://ProgramData/Jenkins/.jenkins/workspace/python-module3/sources
+                        pytest test_calc.py
+                        '''
             }
         }
 
