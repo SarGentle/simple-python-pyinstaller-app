@@ -30,6 +30,7 @@ pipeline {
                     ./activate.bat;
                     cd ../..;
                     pwd;
+                    python -m pip -V;
                     pytest
                     '''
             }
