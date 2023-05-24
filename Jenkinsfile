@@ -10,11 +10,11 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh '''python -m venv .venv;
+                bat '''python -m venv .venv;
                     cd .venv/Scripts;
                     ls;
                     pwd;
-                    . .activate.bat;
+                    . activate.bat;
                     pip install -r requirements.txt;
                     pip install pytest pytest-cov;'''
             }
