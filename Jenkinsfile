@@ -27,7 +27,8 @@ pipeline {
 
                 sh '''
                     cd .venv/Scripts;
-                    ./activate.bat;
+                    ls;
+                    . activate;
                     cd ../..;
                     pwd;
                     python -m pip -V;
