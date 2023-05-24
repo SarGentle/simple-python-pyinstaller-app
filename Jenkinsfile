@@ -23,7 +23,7 @@ pipeline {
             }
         }
 
-        stage('Static anal'){
+        stage('Static analysis'){
             steps{
                 sh 'python -m pylint ./sources/calc.py'
             }
