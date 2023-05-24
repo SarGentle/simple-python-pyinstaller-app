@@ -9,7 +9,7 @@ pipeline {
         }
 
         stage('Install dependencies') {
-                        steps {
+            steps {
                 bat '''python -m venv .venv;
                     cd .venv/Scripts;
                     ls;
