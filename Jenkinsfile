@@ -13,6 +13,9 @@ pipeline {
                 sh '''python -m venv .venv;
                     cd .venv/Scripts;
                     ./activate.bat;
+                    cd ..;
+                    cd ..;
+                    pwd;
                     python -m pip install -r requirements.txt;
                     python -m pip install pytest pytest-cov;'''
             }
