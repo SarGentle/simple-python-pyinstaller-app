@@ -18,7 +18,7 @@ pipeline {
                     pwd;
                     python -m pip install -r requirements.txt;
                     python -m pip install pytest pytest-cov;
-                    python -m pip show pytest'''
+                    '''
             }
         }
 
@@ -26,9 +26,11 @@ pipeline {
             steps {
 
                 sh '''
-                        cd C://ProgramData/Jenkins/.jenkins/workspace/python-module3/sources
-                        pytest
-                        '''
+                    cd .venv/Scripts;
+                    ./activate.bat;
+                    cd ../..;
+                    pytest
+                    '''
             }
         }
 
