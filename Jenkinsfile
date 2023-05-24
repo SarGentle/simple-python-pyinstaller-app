@@ -27,7 +27,7 @@ pipeline {
 
                 sh '''
                         cd C://ProgramData/Jenkins/.jenkins/workspace/python-module3/sources
-                        pytest test_calc.py
+                        pytest
                         '''
             }
         }
