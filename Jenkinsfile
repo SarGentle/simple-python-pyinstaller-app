@@ -33,7 +33,7 @@ pipeline {
                     pwd;
                     python -m pip -V;
                     python -m pip list;
-                    python -m pytest
+                    python -m pytest;
                     '''
             }
         }
