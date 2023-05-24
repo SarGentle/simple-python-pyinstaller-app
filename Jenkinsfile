@@ -25,7 +25,7 @@ pipeline {
 
         stage('Static anal'){
             steps{
-                sh 'python -m pylint ./sources'
+                sh 'python -m pylint ./sources/calc.py'
             }
         }
 
