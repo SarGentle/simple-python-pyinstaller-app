@@ -23,7 +23,7 @@ pipeline {
 
         stage('Run tests') {
             steps {
-                sh 'pytest test_calc.py'
+                sh 'pytest sources/test_calc.py'
             }
         }
 
