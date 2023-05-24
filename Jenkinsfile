@@ -14,7 +14,7 @@ pipeline {
                     cd .venv/Scripts;
                     ls;
                     pwd;
-                    ./.activate.bat
+                    ./activate.bat
                     pip install -r requirements.txt;
                     pip install pytest pytest-cov;'''
             }
