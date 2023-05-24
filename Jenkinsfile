@@ -17,8 +17,15 @@ pipeline {
                     cd ..;
                     pwd;
                     python -m pip install -r requirements.txt;
+                    python -m pip install pylint;
                     python -m pip install pytest pytest-cov;
                     '''
+            }
+        }
+
+        stage('Static anal'){
+            steps{
+                sh 'python -m pylint ./sources'
             }
         }
 
