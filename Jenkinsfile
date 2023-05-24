@@ -17,7 +17,8 @@ pipeline {
                     cd ..;
                     pwd;
                     python -m pip install -r requirements.txt;
-                    python -m pip install pytest pytest-cov;'''
+                    python -m pip install pytest pytest-cov;
+                    python -m pip show pytest'''
             }
         }
 
