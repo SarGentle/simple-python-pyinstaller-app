@@ -12,11 +12,9 @@ pipeline {
             steps {
                 sh '''python -m venv .venv;
                     cd .venv/Scripts;
-                    ls;
-                    pwd;
                     ./activate.bat;
-                    pip install -r requirements.txt;
-                    pip install pytest pytest-cov;'''
+                    python -m pip install -r requirements.txt;
+                    python -m pip install pytest pytest-cov;'''
             }
         }
 
