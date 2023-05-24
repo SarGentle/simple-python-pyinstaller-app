@@ -10,15 +10,14 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                bat '''python -m venv .venv;
+                sh '''python -m venv .venv;
                     cd .venv/Scripts;
                     ls;
                     pwd;
-                    call activate.bat
+                    . .activate;
                     pip install -r requirements.txt;
                     pip install pytest pytest-cov;'''
             }
-        }
         }
 
         stage('Run tests') {
@@ -36,16 +35,6 @@ pipeline {
         stage('Archive coverage report') {
             steps {
                 archiveArtifacts artifacts: 'coverage/*', onlyIfSuccessful: true
-            }
-        }
-        stage('Lint with Pylint') {
-            steps {
-                script {
-                    sh '''
-                    .\\env\\Scripts\\activate.bat
-                    pylint **/*.py
-                    '''
-                }
             }
         }
     }
