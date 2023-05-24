@@ -33,7 +33,7 @@ pipeline {
 
         stage('Coverage report') {
             steps {
-                sh 'pytest --cov=sources --cov-report=html:coverage'
+                sh 'python -m pytest --cov=sources --cov-report=html:coverage'
             }
         }
 
