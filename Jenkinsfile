@@ -27,7 +27,7 @@ pipeline {
 
                 sh '''
                     cd .venv/Scripts;
-                    ls;
+                    cat activate;
                     . activate;
                     cd ../..;
                     pwd;
