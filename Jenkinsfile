@@ -26,13 +26,6 @@ pipeline {
             steps {
 
                 sh '''
-                    cd .venv/Scripts;
-                    cat activate;
-                    . activate;
-                    cd ../..;
-                    pwd;
-                    python -m pip -V;
-                    python -m pip list;
                     python -m pytest;
                     '''
             }
