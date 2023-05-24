@@ -10,10 +10,13 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                bat 'python -m venv .venv'
-                bat '''cd C://ProgramData/Jenkins/.jenkins/workspace/python-module3/.venv/Scripts call activate.bat'''
-                bat 'pip install -r requirements.txt'
-                bat 'pip install pytest pytest-cov'
+                sh '''python -m venv .venv;
+                    cd .venv/Scripts;
+                    ls;
+                    pwd;
+                    ./.activate.bat
+                    pip install -r requirements.txt;
+                    pip install pytest pytest-cov;'''
             }
         }
 
