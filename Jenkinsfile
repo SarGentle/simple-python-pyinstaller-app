@@ -15,8 +15,8 @@ pipeline {
                     ls;
                     pwd;
                     ./activate.bat
-                    pip3 install -r requirements.txt;
-                    pip3 install pytest pytest-cov;'''
+                    pip3.exe install -r requirements.txt
+                    pip3.exe install pytest pytest-cov'''
             }
         }
 
