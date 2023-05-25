@@ -7,8 +7,8 @@ in quotes (i.e. as a string).
 '''
 
 
-def foo(h):
-    return h + h
+# def foo(h):
+#     return h + h
 
 # If 'value' is not an integer, convert it to a float and failing that, a string.
 def conv(value):
